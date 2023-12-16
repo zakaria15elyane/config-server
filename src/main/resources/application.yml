@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      base-path: 
+      exposure:
+        include: health
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev-local 	
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://C:/projetJava/configuration-horsprod
+          force-pull: true
+          tryMasterBranch: true
